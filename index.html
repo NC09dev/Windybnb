@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windybnb</title>
+    <link rel="stylesheet" href="./index.css" class="icon"/>
+    <link rel="icon" href="https://images.emojiterra.com/mozilla/512px/1f53a.png">
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- overlay -->
+    <div class="overlay" id="modal_filters">
+      <div class="modal">
+        <div class="modal__location">
+          <div>LOCATIONS</div>
+          <input type="text" placeholder="Location" id="local_var"/>
+
+          <!-- Location list -->
+          <div  class="list_container">
+            <ul class="list">
+              <li>
+                <img src="https://svgsilh.com/svg/1093169.svg" alt=""/>
+                <div onclick="function_location(0)" class="loc">Helsinki, Finland</div>
+              </li>
+
+              <li>
+                <img src="https://svgsilh.com/svg/1093169.svg" alt="" />
+                <div onclick="function_location(1)" class="loc">Turku, Finland</div>
+              </li>
+
+              <li>
+                <img src="https://svgsilh.com/svg/1093169.svg" alt="" />
+                <div onclick="function_location(2)" class="loc">Oulu, Finland</div>
+              </li>
+
+              <li>
+                <img src="https://svgsilh.com/svg/1093169.svg" alt="" />
+                <div onclick="function_location(3)" class="loc">Vaasa, Finland</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal__guest">
+          <div>GUESTS</div>
+          <input type="text" placeholder="Guest" id="guest_input"/>
+
+          <!-- Num guests list -->
+          <div class="list_container">
+            <ul class="list">
+              <li class="Num_guest">
+                <div>Adults</div>
+                <div>Ages 13 or above</div>
+                <div>
+                  <div><button onclick="plusAdults()" id="plus_adults">+</button></div>
+                  <h1 id="total_adults">0</h1>
+                  <div><button onclick="minusAdults()" id="minus_adults">-</button></div>
+                </div>
+              </li>
+
+              <li class="Num_guest">
+                <div>Children</div>
+                <div>Ages 2-12</div>
+                <div>
+                  <div><button onclick="plusChildren()" id="plus_children">+</button></div>
+                  <h1 id="total_children">0</h1>
+                  <div><button onclick="minusChildren()" id="minus_children">-</button></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- The search button located at the modal -->
+        <div class="modal__button">
+          <button onclick="closeFilters()" class="search" >
+            <img class="magnifying_glass" src="magnifying-glass-solid-white.svg" alt="">
+            Search
+          </button>
+        </div>
+
+      </div>
+      <div onclick="closeFilters()"><button  class="close_button">X</button></div>
+    </div>
+
+    <!-- page header -->
+    <div class="content">
+      <!-- Title and page logo -->
+    <div> 
+      <div><img class="triangle" src="https://images.emojiterra.com/mozilla/512px/1f53a.png" alt=""></div>
+      <div id="title">windbnb</div>
+    </div>
+      <div onclick="openFilters()" class="search_bar">
+        <div class="location" onclick="openFilters()"><input type="text" placeholder="Helsinki, Findland" id="var_loc"></div>
+        <div class="add_guests" onclick="openFilters()"><input type="text" placeholder="Add guests" id="var_guest"></div>
+        <div><img class="magnifying_glass" src="magnifying-glass-solid-red.svg" alt="" onclick="openFilters()" ></div>
+      </div>
+    </div>
+
+    <!-- Stays -->
+    <div class="stays_content">
+      <p id="stays">Stays in Findland</p>
+      <h1 id="N_stays">12+stays</h1>
+    </div>
+
+    <!-- apartments section -->
+    <section class="grid">
+      <article>
+        <img
+          class="apartment-image"
+          src="https://media.istockphoto.com/id/1297586166/photo/modern-elegant-kitchen-stock-photo.jpg?s=612x612&w=0&k=20&c=4qVGJq3EZ-DrVC08kFIXuZMGRe5NcEvziV-H4L9aFKc="
+          alt=""
+        />
+
+        <div class="info">
+          <div class="super-host">SUPER HOST</div>
+          <div class="description">Entire apartment . 2 beds</div>
+          <div class="rate">
+            <img
+              class="star"
+              src="https://static.vecteezy.com/system/resources/previews/013/471/634/non_2x/red-star-icon-free-png.png"
+              alt=""
+            />
+            4.40
+          </div>
+        </div>
+
+        <p class="title">Stylist apartment in center of the city</p>
+      </article>
+      <article>
+        <img
+          class="apartment-image"
+          src="https://static.leonardo-hotels.com/image/leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg"
+          alt=""
+        />
+
+        <div class="info">
+          <div class="description">Private room</div>
+          <div class="rate">
+            <img
+              class="star"
+              src="https://static.vecteezy.com/system/resources/previews/013/471/634/non_2x/red-star-icon-free-png.png"
+              alt=""
+            />
+            4.25
+          </div>
+        </div>
+        <p class="title">Cozy, peaceful and private room with...</p>
+      </article>
+      <article>
+        <img
+          class="apartment-image"
+          src="https://www.elmueble.com/medio/2022/07/26/rellano-de-escalera-con-arbolito-00538437_2dd21413_600x600.jpg"
+          alt=""
+        />
+
+        <div class="info">
+          <div class="description">Entire house</div>
+          <div class="rate">
+            <img
+              class="star"
+              src="https://static.vecteezy.com/system/resources/previews/013/471/634/non_2x/red-star-icon-free-png.png"
+              alt=""
+            />
+            4.96
+          </div>
+        </div>
+
+        <p class="title">Mordern House in a remote area</p>
+      </article>
+      <article>
+        <img
+          class="apartment-image"
+          src="https://img.nh-hotels.net/VPyP4/84d26/original/RD_NH_collection-royal-teleport_024.jpg?output-quality=70&resize=550:*&composite-to=center,center|550:278&background-color=white"
+          alt=""
+        />
+
+        <div class="info">
+          <div class="super-host">SUPER HOST</div>
+          <div class="description">Entire apartment . 2 beds</div>
+          <div class="rate">
+            <img
+              class="star"
+              src="https://static.vecteezy.com/system/resources/previews/013/471/634/non_2x/red-star-icon-free-png.png"
+              alt=""
+            />
+            4.85
+          </div>
+        </div>
+
+        <p class="title">Stylist room in design district </p>
+      </article>
+      <article>
+        <img
+          class="apartment-image"
+          src="https://assets.graydientcreative.com/files/outlets/platinum/images/marquis-3-min.jpg"
+          alt=""
+        />
+
+        <div class="info">
+          <div class="description">Private room</div>
+          <div class="rate">
+            <img
+              class="star"
+              src="https://static.vecteezy.com/system/resources/previews/013/471/634/non_2x/red-star-icon-free-png.png"
+              alt=""
+            />
+            4.54
+          </div>
+        </div>
+
+        <p class="title">Modern apartment close to nature</p>
+      </article>
+      <article>
+        <img
+          class="apartment-image"
+          src="https://www.thespruce.com/thmb/ZqfUoFjPOAqtJBpzjDw-sxRdiNQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/modern-dining-room-ideas-4147451-hero-d6333998f8b34620adfd4d99ac732586.jpg"
+          alt=""
+        />
+
+        <div class="info">
+          <div class="description">Entire house</div>
+          <div class="rate">
+            <img
+              class="star"
+              src="https://static.vecteezy.com/system/resources/previews/013/471/634/non_2x/red-star-icon-free-png.png"
+              alt=""
+            />
+            4.64
+          </div>
+        </div>
+
+        <p class="title">House in a remote area</p>
+      </article>
+    </section>
+
+    <!-- Creator   credits -->
+    <div class="credits">created by NCG09dev - devChallenges.io</div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+  </body>
+</html>

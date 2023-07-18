@@ -1,0 +1,654 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-image: linear-gradient(white 85%, rgb(182, 181, 181));
+}
+
+/* Apartment images*/
+.search{
+  background: #eb5757;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  width: 127px;
+  height: 48px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 200ms ease;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+  margin-top: 32px;
+}
+
+.apartment-image {
+  border-radius: 24px;
+  height: 269px;
+  width: 100%;
+  transition: scale, 0.5s;
+}
+
+.apartment-image:hover{
+  transform: scale(1.08);
+}
+
+.super-host {
+  border-radius: 12px;
+  border: 1px solid #4f4f4f;
+  height: 28px;
+  width: 100px;
+  font-weight: 500;
+  font-size: 11px;
+  color: #4f4f4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  font-family: "Montserrat";
+}
+
+.description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+  font-family: "Montserrat";
+  transition: 500ms;
+}
+
+.apartment-image:hover ~ div > .description{
+  color: #EB5757;
+  filter: blur(0.5px);
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: auto;
+  color: #4f4f4f;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  transition: 500ms;
+}
+
+.apartment-image:hover ~ div > div > .star{
+  transform: scale(1.5);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-family: "Montserrat";
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  margin-top: 12px;
+  font-family: "Montserrat";
+}
+
+/* Header page */
+.search_bar{
+  border-radius: 16px;
+  border: none;
+  box-shadow:  0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: #ffffff;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.search_bar > div:first-child > input{
+  border: none;
+  text-align: center;
+  font-family: 'Muli';
+  font-size: 18px;
+  line-height: 16px;
+  height: 55px;
+  border-radius: 16px 0px 0px 16px ;
+
+}
+
+.search_bar > div:first-child > input::placeholder{
+  color: #333333;
+}
+
+.add_guests{
+  border: 2px solid #f3efef;
+  width: 100%;
+  height: 55px;
+  border-top: none;
+  border-bottom: none;
+}
+
+.search_bar > div:nth-child(2) > input{
+  border: none;
+  text-align: center;
+  font-family: 'Muli';
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+
+}
+
+.search_bar > div:last-child{
+  padding-left: 15px;
+  padding-right: 15px;
+  
+}
+
+.search_bar > div > input:focus{
+  outline: none;
+}
+
+.magnifying_glass{
+  Width: 17.05px;
+  Height: 17.06px;
+}
+
+.search_bar:hover div:nth-child(2) {
+  border: 1px solid #EB5757;
+  border-bottom: none;
+  border-top: none;
+}
+
+.search_bar:hover{
+  border: 1px solid #EB5757 ;
+}
+
+
+/* Title and logo container */
+.content{
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+}
+
+.content > div:first-child{
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.triangle{
+  width: 23.65px;
+  height: 25px;
+  display: flex;
+}
+
+#title{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #EB5757;
+  margin-top: 2px;
+
+}
+
+/* Text above apartment images */
+.stays_content{
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+#stays{
+  font-family: 'Montserrat';
+  font-weight: 700;
+  line-height: 29px;
+  font-size: 24px;
+  color: #333333;
+  margin-top: 85px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+}
+
+#N_stays{
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 18px;
+  color: #4F4F4F;
+  margin-right: 0px;
+  margin-top: 85px;
+  margin-left: auto;
+}
+
+/* Text at the page bottom */
+.credits{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #828282;
+  margin-top: 100px;
+  height: 100px;
+
+
+}
+
+/* Overlay and modal */
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background:rgba(79, 79, 79, 0.4);
+  backdrop-filter: blur(2px);
+  height: 200%;
+  transition: opacity, 200ms;
+  display: none;
+  
+}
+
+.modal {
+  background-color: white;
+  padding-top: 93px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  height: 460px;
+}
+
+.close_button{
+  background: none;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 50%;
+  margin-left: 50%;
+  border: solid 2px black;
+  margin-top: 25px;
+  transition: 200ms;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.close_button:hover{
+  border: solid 2px #EB5757;
+  color: #EB5757;
+  backdrop-filter: blur(4px);
+}
+
+.modal > div {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f2f2f2;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-weight: 800;
+  font-size: 9px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #333333;
+  height: 55px;
+}
+
+.modal > div:hover{
+  border: 1px solid black;
+}
+
+.modal > div > input {
+  width: 100%;
+  margin-top: 4px;
+  border: none;
+}
+
+.modal > div:first-child {
+  border-radius: 16px 0px 0px 16px;
+}
+
+.modal > div:last-child {
+  border-radius: 0px 16px 16px 0px;
+}
+
+.modal > div > input:focus{
+  outline: none;
+}
+
+.modal > div.modal__guest,
+.modal > div.modal__location {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.modal > div.modal__button {
+  display: flex;
+  justify-content: center;
+
+}
+
+.modal > div.modal__button >.search:hover{
+  transform: scale(1.1);
+}
+
+
+/* Location list and Num guests list */
+.list {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 157px;
+}
+
+.list > li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+
+.modal > div:first-child > .list_container > .list > li:hover{
+  border-bottom: solid 2px #EB5757;
+}
+
+.list > li > img {
+  width: 14px;
+  height: 19px;
+}
+
+.list_container{
+  padding-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.Num_guest > div:first-child{
+  font-family: sans-serif;
+  font-weight: 700;
+  position: relative;
+  font-size: 13px;
+}
+
+.Num_guest:hover{
+  border-bottom: none;
+}
+
+.Num_guest > div:nth-child(2){
+  font-size: 11px;
+  color: #BDBDBD;
+  font-family: sans-serif;
+  margin-top: 35px;
+  position: absolute;
+  
+}
+
+.Num_guest:nth-child(2){
+  padding-top: 50px;
+}
+
+.Num_guest > div:last-child{
+  display: flex;
+  position: absolute;
+  margin-top: 75px;
+}
+
+.Num_guest > div > div > button{
+  background-color: white;
+  color: #828282;
+  border: 2px solid #c4c1c1;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+
+}
+
+.Num_guest > div > div > button:hover{
+  background-color: #cfcece;
+
+}
+
+.Num_guest > div > h1{
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Mobile version */
+@media  screen and (max-width: 700px){
+
+  
+  /* Apartment images */
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+    width: 350px;
+    height: 313px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-top: 30px;
+  }
+
+  /* Page header */
+  .content{
+    display: block;
+  }
+
+  .content > div:first-child{
+    display: flex;
+  }
+
+  .search_bar{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .add_guests{
+    width: 60%;
+  }
+
+  .search_bar > div:first-child{
+    width: 100%;
+  }
+
+  .search_bar > div:first-child > input{
+    width: 100%;
+  }
+
+  /* Text above apartment images */
+  .stays_content{
+    padding-top: 25px;
+  }
+
+  #stays{
+    font-size: 25px;
+  }
+
+  #N_stays{
+    font-size: 18px;
+  }
+
+  /* Text at the page bottom */
+  .credits{
+    margin-top: 2000px;
+    font-size: 12px;
+  }
+
+  /* Overlay and Modal */
+  .overlay{
+    width: 100%;
+    opacity: 1;
+  }
+
+  .modal{
+    display: block;
+    height: 632px;
+    width: 100%;
+  }
+
+  .modal > div:first-child, .modal > div:nth-child(2){
+    border-radius: 16px;
+  }
+
+  .modal > div:first-child{
+    margin-top: -10%;
+  }
+  .modal > div:last-child{
+    margin-top: 65%;
+    box-shadow: none;
+    border: none;
+    padding-bottom: 10px ;
+  }
+
+  .close_button{
+    display: none;
+  }
+
+  /* List Container */
+  .list_container{
+    margin-top: 10%;
+    opacity: 0;
+    transform: scale(0);
+    transition: scale, opacity, 200ms;
+    margin-top: 10px;
+  }
+
+  .modal > div:first-child > .list_container{
+    margin-top: 50px;
+  }
+
+  .modal > div:first-child > input:focus ~ .list_container,
+  .modal > div:first-child > .list_container:hover{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .modal > div:nth-child(2) > .list_container{
+    margin-top: 25px;
+    width: 50%;
+    padding: 0px;
+  }
+
+  .modal > div:nth-child(2) > input:focus ~ .list_container,
+  .modal > div:nth-child(2) > .list_container:hover{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+/* Tablet version */
+@media  screen and (min-width: 701px) {
+  
+  /* Apartment images */
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Page header */
+  .content{
+    display: block;
+  }
+  .search_bar{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .add_guests{
+    width: 70%;
+  }
+
+  .search_bar > div:first-child{
+    width: 100%;
+  }
+
+  .search_bar > div:first-child > input{
+    width: 100%;
+  }
+
+  /* Text above the images */
+  .stays_content{
+    padding-top: 25px;
+  }
+
+  /* modal and overlay */
+  .close_button{
+    display: none;
+  }
+}
+/* Desktop parameters */
+@media screen and (min-width: 1000px) {
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content{
+    display: flex;
+  }
+
+  /* Overlay and modal */
+  .overlay{
+    opacity: 0;
+  }
+  
+  .overlay:hover{
+    opacity: 1;
+  }
+
+  .close_button{
+    display: block;
+  }
+  
+}
